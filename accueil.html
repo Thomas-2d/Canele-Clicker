@@ -11,15 +11,19 @@
 	
 	<div>
 		<h1>Canelé Clicker</h1>
-		<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Caneles_stemilion.jpg/1280px-Caneles_stemilion.jpg" alt="Caneles">
 		<br>
-		<div>
-			<p>Vous avez <span id="counter">0</span> canelés</p>
-			<p>Vous avez <span id="nbFour">0</span> fours</p>
-		</div>
+		<div id="game">
+			<div id="text">
+				<p>Vous avez <span id="counter">0</span> canelés</p>
+				<p>Vous avez <span id="nbFour">0</span> fours</p>
+			</div>
+		
 		<input type="submit" name="Cuisiner" value="Cuisiner" id="increment" onclick="increment()">
 		<input type="submit" name="Four" value="Acheter un four (25 canelés)" onclick="buyFour()">
+		</div>
 	</div>
+
+
 	<script type="text/javascript">
 		var caneles = 0;
 		var four = 0;
@@ -40,8 +44,6 @@
 			caneles += bonus;
 			document.getElementById("counter").innerHTML = caneles;
 		}
-		
-
 		</script>
 </body>
 </html>
