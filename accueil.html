@@ -8,15 +8,36 @@
 
 </head>
 <body>
+	
 	<div>
 		<h1>Canelé Clicker</h1>
 		<img src="Caneles.jpg" alt="Caneles">
 		<br>
 		<div>
-			<p>Vous avez <span>0</span> canelés</p>
+			<p>Vous avez <span id="counter">0</span> canelés</p>
+			<p>Vous avez <span id="nbFour">0</span> fours</p>
 		</div>
-		<input type="submit" name="Cuisiner" value="Cuisiner">
-		<input type="submit" name="Four" value="Acheter un four (25 canelés)">
+		<input type="submit" name="Cuisiner" value="Cuisiner" id="increment" onclick="increment()">
+		<input type="submit" name="Four" value="Acheter un four (25 canelés)" onclick="buyFour()">
 	</div>
+	<script type="text/javascript">
+		var caneles = 0;
+		document.getElementById("counter").innerHTML = caneles;
+		function increment() {
+			caneles += 1;
+			document.getElementById("counter").innerHTML = caneles;
+		}
+		var four = 0;
+		document.getElementById("nbFour").innerHTML = four;
+		function buyFour() {
+			if (caneles >= 25) {
+				four += 1;
+				document.getElementById("nbFour").innerHTML = four;
+				caneles = caneles - 25;
+				document.getElementById("counter").innerHTML = caneles;
+			}
+		}
+
+		</script>
 </body>
 </html>
