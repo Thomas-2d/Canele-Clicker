@@ -11,7 +11,7 @@
 	
 	<div>
 		<h1>Canelé Clicker</h1>
-		<img src="Caneles.jpg" alt="Caneles">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Caneles_stemilion.jpg/1280px-Caneles_stemilion.jpg" alt="Caneles">
 		<br>
 		<div>
 			<p>Vous avez <span id="counter">0</span> canelés</p>
@@ -22,12 +22,9 @@
 	</div>
 	<script type="text/javascript">
 		var caneles = 0;
-		document.getElementById("counter").innerHTML = caneles;
-		function increment() {
-			caneles += 1;
-			document.getElementById("counter").innerHTML = caneles;
-		}
 		var four = 0;
+		
+
 		document.getElementById("nbFour").innerHTML = four;
 		function buyFour() {
 			if (caneles >= 25) {
@@ -37,6 +34,13 @@
 				document.getElementById("counter").innerHTML = caneles;
 			}
 		}
+		document.getElementById("counter").innerHTML = caneles;
+		function increment() {
+			var bonus = 1 + four;
+			caneles += bonus;
+			document.getElementById("counter").innerHTML = caneles;
+		}
+		
 
 		</script>
 </body>
